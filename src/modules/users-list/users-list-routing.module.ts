@@ -7,8 +7,9 @@ import { PaginationResolver } from './resolvers/pagination.resolver';
 const routes: Routes = [
   {
     path: '',
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
     resolve: {
-      users: UsersResolver,
+      // users: UsersResolver,
       paginationInfo: PaginationResolver
     },
     component: UsersListComponent

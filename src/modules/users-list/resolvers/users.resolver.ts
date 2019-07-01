@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 import { ApiService } from '../../core/services';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class UsersResolver implements Resolve<any> {
 
   constructor(private apiService: ApiService) {
